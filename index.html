@@ -8,66 +8,67 @@
 </head>
 <style>
     body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
 
-    .phone {
-        position: relative;
-        border: 16px solid #333;
-        border-radius: 36px;
-        width: 360px;
-        height: 640px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
+.phone {
+    position: relative;
+    border: 16px solid #333;
+    border-radius: 36px;
+    width: 80%; /* Используем проценты вместо фиксированной ширины */
+    max-width: 360px; /* Максимальная ширина для больших экранов */
+    height: 80vh; /* Используем проценты вместо фиксированной высоты */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-    .avatar-container {
-        position: relative;
-    }
+.avatar-container {
+    position: relative;
+}
 
-    .avatar-container img {
-        max-width: 50px;
-        max-height: 50px;
-        border-radius: 50%;
-    }
+.avatar-container img {
+    max-width: 20%; /* Используем проценты */
+    max-height: auto; /* Поддерживаем пропорции */
+    border-radius: 50%;
+}
 
-    .screen {
-        background: #fff;
-        flex: 1;
-        padding: 20px;
-        box-sizing: border-box;
-        overflow-y: auto; 
-    }
+.screen {
+    background: #fff;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+}
 
-    .button-container {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 10px;
-    }
+.button-container {
+    position: absolute;
+    bottom: 5%; /* Используем проценты для отступа снизу */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
 
-    .button-container button {
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+.button-container button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    video {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        border-radius: 10%;
-    }
+video {
+    width: 100%;
+    height: auto;
+    max-height: 40vh; /* Используем проценты для высоты видео */
+    border-radius: 10%;
+}
 </style>
 <body>
     <div class="phone">
