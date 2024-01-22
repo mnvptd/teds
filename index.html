@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>phone pre</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .phone {
+        position: relative;
+        border: 16px solid #333;
+        border-radius: 36px;
+        width: 360px;
+        height: 800px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .avatar-container {
+        position: relative;
+    }
+
+    .avatar-container img {
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 50%;
+    }
+
+    .screen {
+        background: #fff;
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto; 
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .button-container button {
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-radius: 10%;
+    }
+</style>
+<body>
+    <div class="phone">
+        <div class="avatar-container">
+            <img src="1.jpg">
+        </div>
+        <div class="screen" id="screen">
+            <!-- content -->
+            <h2>добро пожаловать, я пидарас</h2>
+            <video width="auto" height="auto" controls loop muted autoplay>  
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="button-container">
+            <button onclick="showTheory()">Теория</button>
+            <button onclick="showPractice()">Практика</button>
+            <button onclick="showResults()">Результаты</button>
+        </div>
+    </div>
+    <script>
+        function showTheory() {
+            const screen = document.getElementById('screen');
+            screen.innerHTML = 'Теория: [текст теории]';
+        }
+
+        function showPractice() {
+            const screen = document.getElementById('screen');
+            screen.innerHTML = 'Тест: [в дальнейшем проработанный тест]';
+        }
+
+        function showResults() {
+            const screen = document.getElementById('screen');
+            screen.innerHTML = 'Результаты: [Баллы, кол-во правильных ответов и т.д.]';
+        }
+    </script>
+</body>
+</html>
