@@ -17,13 +17,14 @@ body {
 
 .phone {
     position: relative;
+    border: 16px solid #333;
+    border-radius: 36px;
     width: 80%; /* Используем проценты вместо фиксированной ширины */
     max-width: 360px; /* Максимальная ширина для больших экранов */
-    margin: auto; /* Центрируем .phone */
+    height: 80vh; /* Используем проценты вместо фиксированной высоты */
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: #333; /* Добавим фон, чтобы линий не было видно */
 }
 
 .avatar-container {
@@ -34,8 +35,6 @@ body {
     max-width: 20%; /* Используем проценты */
     max-height: auto; /* Поддерживаем пропорции */
     border-radius: 50%;
-    align-self: center; /* Центрируем изображение аватара */
-    margin-top: 20px; /* Даем небольшой отступ сверху */
 }
 
 .screen {
@@ -48,11 +47,10 @@ body {
 
 .button-container {
     position: absolute;
-    bottom: 5%;
+    bottom: 5%; /* Используем проценты для отступа снизу */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column; /* Изменяем направление на вертикальное для кнопок */
     gap: 10px;
 }
 
@@ -71,6 +69,14 @@ video {
     max-height: 40vh; /* Используем проценты для высоты видео */
     border-radius: 10%;
 }
+
+/* Скрыть границы на устройствах с шириной экрана меньше 600px (примерное значение) */
+@media only screen and (max-width: 600px) {
+    .phone {
+        border: none;
+    }
+}
+
 </style>
 <body>
     <div class="phone">
