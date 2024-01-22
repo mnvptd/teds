@@ -84,31 +84,31 @@ video {
         </div>
         <div class="screen" id="screen">
             <!-- content -->
-            <h2>добро пожаловать, я пидарас</h2>
+            <h2>[some text here]</h2>
             <video width="auto" height="auto" controls loop muted autoplay>  
                 <source src="video.mp4" type="video/mp4">
             </video>
         </div>
         <div class="button-container">
-            <button onclick="showTheory()">Теория</button>
-            <button onclick="showPractice()">Практика</button>
-            <button onclick="showResults()">Результаты</button>
+            <button onclick="showTheory()">Theory</button>
+            <button onclick="showPractice()">Practice</button>
+            <button onclick="showResults()">Result</button>
         </div>
     </div>
     <script>
         function showTheory() {
             const screen = document.getElementById('screen');
-            screen.innerHTML = 'Теория: [текст теории]';
+            screen.innerHTML = 'Theory: [testing]';
         }
 
         function showPractice() {
             const screen = document.getElementById('screen');
-            screen.innerHTML = 'Тест: [в дальнейшем проработанный тест]';
+            screen.innerHTML = 'Practice: [practive script]';
         }
 
         function showResults() {
             const screen = document.getElementById('screen');
-            screen.innerHTML = 'Результаты: [Баллы, кол-во правильных ответов и т.д.]';
+            screen.innerHTML = 'Result: [point system]';
         }
     </script>
 </body>
