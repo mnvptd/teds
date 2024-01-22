@@ -19,9 +19,9 @@ body {
     position: relative;
     border: 16px solid #333;
     border-radius: 36px;
-    width: 80%; /* Используем проценты вместо фиксированной ширины */
-    max-width: 360px; /* Максимальная ширина для больших экранов */
-    height: 80vh; /* Используем проценты вместо фиксированной высоты */
+    width: 80%;
+    max-width: 360px;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -32,8 +32,8 @@ body {
 }
 
 .avatar-container img {
-    max-width: 20%; /* Используем проценты */
-    max-height: auto; /* Поддерживаем пропорции */
+    max-width: 20%;
+    max-height: auto;
     border-radius: 50%;
 }
 
@@ -47,7 +47,7 @@ body {
 
 .button-container {
     position: absolute;
-    bottom: 5%; /* Используем проценты для отступа снизу */
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -66,11 +66,10 @@ body {
 video {
     width: 100%;
     height: auto;
-    max-height: 40vh; /* Используем проценты для высоты видео */
+    max-height: 40vh;
     border-radius: 10%;
 }
 
-/* Скрыть границы на устройствах с шириной экрана меньше 600px (примерное значение) */
 @media only screen and (max-width: 600px) {
     .phone {
         border: none;
