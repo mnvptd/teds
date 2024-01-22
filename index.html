@@ -7,7 +7,7 @@
     <title>phone pre</title>
 </head>
 <style>
-    body {
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +69,14 @@ video {
     max-height: 40vh; /* Используем проценты для высоты видео */
     border-radius: 10%;
 }
+
+/* Скрыть границы на устройствах с шириной экрана меньше 600px (примерное значение) */
+@media only screen and (max-width: 600px) {
+    .phone {
+        border: none;
+    }
+}
+
 </style>
 <body>
     <div class="phone">
